@@ -31,5 +31,8 @@ button.btn-header{
         color: white;
         background-color: black;
     }
+    &:hover{
+        opacity: .5;
+    }
 }
 

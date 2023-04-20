@@ -62,6 +62,9 @@ button.btn-header.shop {
   color: white;
   background-color: black;
 }
+button.btn-header:hover {
+  opacity: 0.5;
+}
 
 .container {
   margin: auto;
@@ -92,6 +95,74 @@ button.btn-header.shop {
   }
 }
 
+.card_prod {
+  margin: auto;
+  width: 200px;
+  border: 2px solid #F5F5F5;
+}
+.card_prod .img {
+  height: 300px;
+}
+.card_prod .img img {
+  width: 100%;
+  height: 100%;
+}
+.card_prod .description {
+  padding: 15px 10px;
+}
+.card_prod .description h3 {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.card_prod .description p.price {
+  padding: 0;
+  color: #FAC338;
+  font-weight: 700;
+  margin: 0;
+  font-size: 17px;
+}
+.card_prod .description button.btn-add {
+  background-color: transparent;
+  border: 2px solid #FAC338;
+  padding: 5px 10px;
+  font-weight: 600;
+  margin: 0;
+  font-size: 12px;
+}
+.card_prod .description button.btn-add:hover {
+  background-color: #FAC338;
+  color: white;
+}
+
+.cat_title {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 5px;
+  align-items: center;
+}
+.cat_title h2 {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.cat_title h2.best {
+  margin: auto;
+  font-size: 30px;
+  font-weight: 700;
+}
+.cat_title a {
+  color: black;
+  text-decoration: underline;
+  color: #78615D;
+  font-weight: 600;
+}
+
+.categorie_container {
+  padding: 1em 0;
+}
+
 .header {
   width: 100vw;
   height: 90vh;
@@ -118,9 +189,11 @@ button.btn-header.shop {
 }
 .header .carousel-item {
   transition: transform 0.5s ease-in, opacity 0.5s ease-in;
-  height: 100%;
 }
 .header .carousel-item .desc {
+  min-height: 90vh;
+  background-color: salmon;
+  padding: 0;
   width: 100%;
   height: 100%;
   padding: 30px 0;
@@ -132,6 +205,7 @@ button.btn-header.shop {
   background-size: cover;
 }
 .header .carousel-item .desc.jewelery_desc {
+  padding: 0;
   background-color: #191819;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -152,8 +226,22 @@ button.btn-header.shop {
 .header .carousel-item .desc.jewelery_desc h2 {
   line-height: 1;
 }
+.header .carousel-item .desc.jewelery_desc .img {
+  background: url("../images/jw_1.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header .carousel-item .desc.jewelery_desc .img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
 .header .carousel-item .desc.clothes_desc {
   background-color: #E0E0E0;
+  padding: 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -170,10 +258,24 @@ button.btn-header.shop {
     order: 2;
   }
 }
+.header .carousel-item .desc.clothes_desc .img {
+  background: url("../images/cl_4.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header .carousel-item .desc.clothes_desc .img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
 .header .carousel-item .desc.books_desc {
   background-color: #AAC1D5;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  padding: 0;
 }
 @media screen and (max-width: 768px) {
   .header .carousel-item .desc.books_desc {
@@ -192,6 +294,19 @@ button.btn-header.shop {
   color: black;
   width: 95%;
   line-height: 1;
+}
+.header .carousel-item .desc.books_desc .img {
+  background: url("../images/book_3.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header .carousel-item .desc.books_desc .img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
 }
 .header .carousel-item .desc .content {
   width: 70%;
@@ -300,4 +415,197 @@ nav .nav-item a {
 }
 nav .nav-item a.active {
   font-weight: 600;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 5em 0;
+}
+footer .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  footer .content {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .content .desc {
+    margin-bottom: 10px;
+  }
+}
+footer .content .desc img {
+  margin-bottom: 10px;
+  width: 100px;
+}
+footer .content .desc img:hover {
+  opacity: 0.5;
+}
+footer .content .desc p {
+  font-size: 15px;
+  width: 80%;
+  font-weight: 300;
+}
+footer .content .desc .social-media img {
+  width: 30px;
+  margin-right: 10px;
+}
+footer .content .menu ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+footer .content .menu ul li {
+  margin-bottom: 10px;
+}
+footer .content .menu ul a {
+  color: white;
+}
+footer .content .menu ul a:hover {
+  opacity: 0.7;
+}
+footer .content .btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+footer .content .btns button {
+  width: 100%;
+  font-size: 15px;
+}
+
+.categories {
+  margin-bottom: 2em;
+}
+.categories h2 {
+  margin: 1em 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3em;
+}
+.categories .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .categories .cards {
+    flex-wrap: wrap;
+  }
+}
+.categories .cards .card {
+  margin: auto 10px;
+  min-width: 217px;
+  text-align: center;
+  padding: 0;
+  border: 5px solid #F5F5F5;
+  border-radius: 10px;
+}
+@media screen and (max-width: 576px) {
+  .categories .cards .card {
+    margin: 15px;
+  }
+}
+.categories .cards .card .img {
+  width: 100%;
+  height: 300px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+.categories .cards .card .card-title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: 25px;
+  color: #444444;
+}
+.categories .cards .card .card-text {
+  color: #A5A5A5;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.join_us {
+  background-color: #E5C643;
+}
+.join_us .content {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4em 1em;
+}
+@media screen and (max-width: 768px) {
+  .join_us .content {
+    width: 99%;
+  }
+}
+.join_us .content h2 {
+  font-weight: 700;
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .join_us .content h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .join_us .content h2 {
+    font-size: 40px;
+  }
+}
+.join_us .content p {
+  font-size: 18px;
+}
+.join_us .content form {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .join_us .content form {
+    flex-direction: column;
+    font-size: 15px;
+  }
+}
+.join_us .content form input {
+  width: 400px;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  outline: none;
+  border: 2px solid white;
+}
+@media screen and (max-width: 768px) {
+  .join_us .content form input {
+    width: 100%;
+  }
+}
+.join_us .content form button.send {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  padding: 10px 40px;
+  font-weight: 600px;
+}
+@media screen and (max-width: 768px) {
+  .join_us .content form button.send {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+.join_us .content form button.send:hover {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
 }/*# sourceMappingURL=main.css.map */

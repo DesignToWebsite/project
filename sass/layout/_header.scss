@@ -19,13 +19,16 @@
     }
     .carousel-item{
         transition:  transform .5s ease-in, opacity .5s ease-in;
-        height: 100%;
         .desc{
+            min-height: 90vh;
+            background-color: salmon;
+            padding: 0;
             &.generel_desc{
                 background:linear-gradient(to left top,rgba(0, 0, 0,.5),rgba(0, 0, 0,.5)), url("../images/bg-img.png") ;
                 background-size: cover;
             }
             &.jewelery_desc{
+                padding: 0;
                 background-color: #191819;
                 display: grid;
                 grid-template-columns: 2fr 1fr;
@@ -41,10 +44,22 @@
                 h2{
                     line-height: 1;
                 }
+                .img{
+                    background: url("../images/jw_1.jpg");
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+                    @include small-screen{
+                        height: 300px;
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+                }
 
             }
             &.clothes_desc{
                 background-color: #E0E0E0;
+                padding: 0;
                 display: grid;
                 grid-template-columns: 2fr 1fr;
                 @include small-screen{
@@ -56,11 +71,23 @@
                         order: 2;
                     }
                 }
+                .img{
+                    background: url("../images/cl_4.jpg");
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+                    @include small-screen{
+                        height: 300px;
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+                }
             }
             &.books_desc{
                 background-color: #AAC1D5;
                 display: grid;
                 grid-template-columns: 2fr 1fr;
+                padding: 0;
                 @include small-screen{
                     grid-template-columns: 1fr;
                 }
@@ -74,6 +101,17 @@
                     color: black;
                     width: 95%;
                     line-height: 1 ;
+                }
+                .img{
+                    background: url("../images/book_3.jpg");
+                    background-size: cover;
+                    height: 100%;
+                    width: 100%;
+                    @include small-screen{
+                        height: 300px;
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
                 }
                 
             }
