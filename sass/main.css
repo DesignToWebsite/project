@@ -650,12 +650,14 @@ footer .content .btns button {
   border-radius: 3px;
   padding: 10px;
   margin-bottom: 25px;
+  margin-top: 20px;
 }
 .login form p {
-  font-size: 15px;
+  font-size: 12px;
   color: black;
   text-align: center;
 }
 .login form p a {
-  color: #EBD96B;
+  color: rgb(0, 121, 251);
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
