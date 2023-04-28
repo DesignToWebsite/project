@@ -388,7 +388,6 @@ button.btn-header:hover {
 }
 
 nav {
-  background-color: darkblue;
   align-items: center;
 }
 @media screen and (max-width: 991px) {
